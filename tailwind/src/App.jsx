@@ -24,16 +24,16 @@ function App() {
         </div>
       </div>
 
-      <Header />
       <BrowserRouter>
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/sobre" element={<Sobre />} />
           <Route path="/produto" element={<Produto />} />
           <Route path="/contato" element={<Contato />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
-      <Footer />
     </>
   );
 }
