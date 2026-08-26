@@ -2,22 +2,21 @@ import { Link } from 'react-router-dom';
 
 function Header() {
   return (
-    <header className="bg-slate-900 text-white p-4 flex items-center justify-between">
-      <p className="font-extrabold text-xl">Logo do futuro</p>
-      <nav className="flex gap-6">
-        <Link to="/" className="hover:text-cyan-400 transition-all">
-          Home
-        </Link>
-        <Link to="/sobre" className="hover:text-cyan-400 transition-all">
-          Comida
-        </Link>
-        <Link to="/produto" className="hover:text-cyan-400 transition-all">
-          Bebida
-        </Link>
-        <Link to="/contato" className="hover:text-cyan-400 transition-all">
-          Viagem
-        </Link>
+    <header className="bg-white border-b border-slate-200 px-8 py-4 flex items-center justify-between">
+      <p className="font-extrabold text-xl text-slate-900">🛍️ Logo do futuro</p>
+
+      <nav className="flex gap-8 text-slate-600 font-medium">
+        <Link to="/" className="hover:text-cyan-600 transition-all">Home</Link>
+        <Link to="/sobre" className="hover:text-cyan-600 transition-all">Comida</Link>
+        <Link to="/produto" className="hover:text-cyan-600 transition-all">Bebida</Link>
+        <Link to="/contato" className="hover:text-cyan-600 transition-all">Viagem</Link>
       </nav>
+
+      <div className="flex gap-5 text-slate-500 text-lg">
+        <span>🔍</span>
+        <span>👤</span>
+        <span>🛒</span>
+      </div>
     </header>
   );
 }
