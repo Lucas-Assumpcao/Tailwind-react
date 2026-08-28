@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 const imagens = [
-  { src: '/comida.jpeg', alt: 'Comida' },
+  { src: '/comida.jpg', alt: 'Comida' },
   { src: '/bebida.jpeg', alt: 'Bebida' },
   { src: '/viagem.jpeg', alt: 'Viagem' },
 ];
@@ -18,13 +18,13 @@ function Carrossel() {
   }, []);
 
   return (
-    <div className="relative w-full h-40 overflow-hidden rounded-xl">
+    <div className="relative mx-auto w-full max-w-5xl h-40 md:h-56 overflow-hidden rounded-xl">
       {imagens.map((imagem, index) => (
         <img
           key={imagem.src}
           src={imagem.src}
           alt={imagem.alt}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
+          className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-700 ${
             index === indiceAtual ? 'opacity-100' : 'opacity-0'
           }`}
         />
